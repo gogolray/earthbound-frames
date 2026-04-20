@@ -26,7 +26,7 @@ body{
     line-height:1.7;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 nav{
     width:100%;
@@ -107,7 +107,7 @@ nav{
     color:#333;
 }
 
-/* SECTION */
+/* GENERAL SECTION */
 
 .section{
     max-width:1300px;
@@ -127,7 +127,7 @@ nav{
     color:#333;
 }
 
-/* META */
+/* EXHIBITION DETAILS */
 
 .meta-grid{
     display:grid;
@@ -183,6 +183,11 @@ nav{
     max-height:100%;
     object-fit:contain;
     padding:30px;
+
+    /* Disable easy downloading */
+    -webkit-user-drag:none;
+    user-select:none;
+    pointer-events:none;
 }
 
 /* ARROWS */
@@ -272,6 +277,8 @@ footer a{
 
 <body>
 
+<!-- NAV -->
+
 <nav>
     <div class="logo">Earthbound Frames</div>
 
@@ -282,6 +289,8 @@ footer a{
         <a href="#contact">Contact</a>
     </div>
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -308,6 +317,8 @@ footer a{
 
 </section>
 
+<!-- CURATORIAL NOTE -->
+
 <section class="section" id="about">
 
     <h2 class="section-title">Curatorial Note</h2>
@@ -323,6 +334,8 @@ footer a{
     </div>
 
 </section>
+
+<!-- EXHIBITION -->
 
 <section class="section" id="exhibition">
 
@@ -364,6 +377,8 @@ footer a{
 
 </section>
 
+<!-- COLLECTION -->
+
 <section class="section" id="frames">
 
     <h2 class="section-title">Collection</h2>
@@ -375,37 +390,36 @@ footer a{
 
         <div class="visual-track" id="sliderTrack">
 
-            <div class="visual-slide"><img src="photo1.jpg"></div>
-            <div class="visual-slide"><img src="photo2.jpg"></div>
-            <div class="visual-slide"><img src="photo3.jpg"></div>
-            <div class="visual-slide"><img src="photo4.jpg"></div>
-            <div class="visual-slide"><img src="photo5.jpg"></div>
-            <div class="visual-slide"><img src="photo6.jpg"></div>
-            <div class="visual-slide"><img src="photo7.jpg"></div>
-            <div class="visual-slide"><img src="photo8.jpg"></div>
-            <div class="visual-slide"><img src="photo9.jpg"></div>
-            <div class="visual-slide"><img src="photo10.jpg"></div>
-            <div class="visual-slide"><img src="photo11.jpg"></div>
-            <div class="visual-slide"><img src="photo12.jpg"></div>
-            <div class="visual-slide"><img src="photo13.jpg"></div>
-            <div class="visual-slide"><img src="photo14.jpg"></div>
-            <div class="visual-slide"><img src="photo15.jpg"></div>
-            <div class="visual-slide"><img src="photo16.jpg"></div>
-            <div class="visual-slide"><img src="photo17.jpg"></div>
-            <div class="visual-slide"><img src="photo18.jpg"></div>
-            <div class="visual-slide"><img src="photo19.jpg"></div>
-            <div class="visual-slide"><img src="photo20.jpg"></div>
-            <div class="visual-slide"><img src="photo21.jpg"></div>
-            <div class="visual-slide"><img src="photo22.jpg"></div>
-            <div class="visual-slide"><img src="photo23.jpg"></div>
-            <div class="visual-slide"><img src="photo24.jpg"></div>
-            <div class="visual-slide"><img src="photo25.jpg"></div>
-            <div class="visual-slide"><img src="photo26.jpg"></div>
-            <div class="visual-slide"><img src="photo27.jpg"></div>
-            <div class="visual-slide"><img src="photo28.jpg"></div>
+            <div class="visual-slide"><img src="photo1.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo2.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo3.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo4.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo5.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo6.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo7.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo8.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo9.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo10.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo11.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo12.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo13.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo14.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo15.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo16.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo17.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo18.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo19.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo20.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo21.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo22.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo23.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo24.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo25.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo26.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo27.jpg" alt=""></div>
+            <div class="visual-slide"><img src="photo28.jpg" alt=""></div>
 
         </div>
-
     </div>
 
     <div class="caption">
@@ -414,6 +428,8 @@ footer a{
     </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer id="contact">
 
@@ -430,8 +446,8 @@ footer a{
     <div class="copyright">
         © 2026 Ray Kawshik. All photographs, texts, and visual materials on this
         website are protected by copyright and may not be reproduced, distributed,
-        published, or used in any form without prior written permission from the artist.
-        All rights reserved.
+        published, downloaded, published elsewhere, or used in any form without
+        prior written permission from the artist. All rights reserved.
     </div>
 
 </footer>
@@ -455,7 +471,11 @@ function prevSlide(){
     updateSlide();
 }
 
+/* Auto slide every 30 seconds */
+
 setInterval(nextSlide, 30000);
+
+/* Swipe support */
 
 let startX = 0;
 let endX = 0;
