@@ -6,7 +6,7 @@
 
 <title>Earthbound Frames | Ray Kawshik</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -21,106 +21,89 @@ html{
 
 body{
     font-family:'Inter', sans-serif;
-    background:#0b0b0b;
-    color:#f5f5f5;
-    line-height:1.8;
+    background:#ffffff;
+    color:#111;
+    line-height:1.7;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
+    width:100%;
+    padding:28px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:28px 8%;
+    border-bottom:1px solid #e5e5e5;
+    background:#fff;
     position:sticky;
     top:0;
     z-index:999;
-    background:rgba(11,11,11,0.95);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
-    font-family:'Cormorant Garamond', serif;
-    font-size:2.2rem;
+    font-size:1.8rem;
     font-weight:700;
-    letter-spacing:1px;
+    font-family:'Playfair Display', serif;
+    letter-spacing:.5px;
 }
 
 .nav-links{
     display:flex;
-    gap:28px;
-    flex-wrap:wrap;
+    gap:32px;
 }
 
 .nav-links a{
     text-decoration:none;
-    color:#f5f5f5;
+    color:#111;
     font-weight:500;
-    transition:.3s;
+    font-size:.95rem;
 }
 
 .nav-links a:hover{
-    color:#bdbdbd;
+    opacity:.7;
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
+    min-height:85vh;
     display:flex;
     align-items:center;
     justify-content:center;
     padding:80px 8%;
-    text-align:center;
-    background:#000;
 }
 
 .hero-content{
-    max-width:900px;
+    max-width:950px;
+    text-align:center;
 }
 
 .hero h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:6rem;
-    line-height:1;
+    font-family:'Playfair Display', serif;
+    font-size:5rem;
+    font-weight:700;
     margin-bottom:20px;
 }
 
 .hero-sub{
-    font-size:1.3rem;
-    margin-bottom:25px;
-    letter-spacing:1px;
+    font-size:1.2rem;
+    margin-bottom:18px;
+    color:#444;
 }
 
-.hero-line{
+.hero-statement{
     font-style:italic;
-    color:#cfcfcf;
-    margin-bottom:30px;
-    font-size:1.1rem;
+    margin-bottom:28px;
+    font-size:1.05rem;
+    color:#666;
 }
 
 .hero p{
-    max-width:700px;
+    max-width:780px;
     margin:auto;
-    margin-bottom:35px;
-    color:#d8d8d8;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 30px;
-    border:1px solid #f5f5f5;
-    color:#f5f5f5;
-    text-decoration:none;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#f5f5f5;
-    color:#000;
+    font-size:1rem;
+    color:#333;
 }
 
 /* SECTION */
@@ -132,75 +115,139 @@ nav{
 }
 
 .section-title{
-    font-family:'Cormorant Garamond', serif;
-    font-size:3.5rem;
-    margin-bottom:35px;
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    margin-bottom:24px;
+}
+
+.curatorial-note{
+    max-width:900px;
+    font-size:1rem;
+    color:#333;
+}
+
+/* EXHIBITION META */
+
+.meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+    margin-top:40px;
+}
+
+.meta-box{
+    padding:24px;
+    border:1px solid #ececec;
+    background:#fafafa;
+}
+
+.meta-box h3{
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:10px;
+    color:#555;
+}
+
+.meta-box p{
+    font-size:.95rem;
 }
 
 /* GALLERY */
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:22px;
+.visual-slider{
+    position:relative;
+    max-width:1100px;
+    height:760px;
+    margin:auto;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid #eee;
 }
 
-.gallery img{
+.visual-track{
+    display:flex;
     width:100%;
-    height:420px;
-    object-fit:cover;
-    border-radius:14px;
-    filter:grayscale(100%);
-    transition:.4s;
+    height:100%;
+    transition:transform .6s ease;
 }
 
-.gallery img:hover{
-    transform:scale(1.02);
-    filter:grayscale(0%);
+.visual-slide{
+    min-width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
 }
 
-/* FEATURED */
-
-.featured{
-    background:#111;
-    padding:50px;
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,0.06);
+.visual-slide img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    padding:30px;
 }
 
-.featured h3{
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:rgba(255,255,255,.9);
     font-size:2rem;
-    margin-bottom:18px;
-    font-family:'Cormorant Garamond', serif;
+    cursor:pointer;
+    padding:12px 20px;
+    z-index:10;
 }
 
-.featured p{
-    color:#d0d0d0;
+.prev{
+    left:20px;
 }
 
-/* ABOUT */
+.next{
+    right:20px;
+}
 
-.about-box{
+/* CAPTION */
+
+.caption{
     max-width:900px;
+    margin:30px auto 0;
+    text-align:center;
+    font-size:.95rem;
+    color:#555;
 }
 
 /* FOOTER */
 
 footer{
-    padding:80px 8%;
-    background:#050505;
-    border-top:1px solid rgba(255,255,255,0.06);
+    margin-top:120px;
+    padding:70px 8%;
+    background:#111;
+    color:white;
 }
 
 footer h3{
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Playfair Display', serif;
     font-size:2rem;
-    margin-bottom:20px;
+    margin-bottom:18px;
+}
+
+footer p{
+    margin-bottom:10px;
 }
 
 footer a{
-    color:#f5f5f5;
+    color:white;
     text-decoration:none;
+}
+
+.copyright{
+    margin-top:40px;
+    font-size:.9rem;
+    color:#bbb;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:25px;
 }
 
 /* MOBILE */
@@ -213,30 +260,33 @@ footer a{
     }
 
     .hero h1{
-        font-size:3.8rem;
+        font-size:3.2rem;
     }
 
-    .section-title{
-        font-size:2.5rem;
+    .visual-slider{
+        height:420px;
     }
 
-    .gallery img{
-        height:320px;
+    .nav-links{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 }
 </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 
 <nav>
     <div class="logo">Earthbound Frames</div>
 
     <div class="nav-links">
-        <a href="#gallery">Gallery</a>
-        <a href="#featured">Featured Work</a>
-        <a href="#about">About</a>
+        <a href="#about">Curatorial Note</a>
+        <a href="#exhibition">Exhibition</a>
+        <a href="#frames">Collection</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
@@ -250,91 +300,149 @@ footer a{
         <h1>Earthbound Frames</h1>
 
         <div class="hero-sub">
-            Street Photography • Visual Ethnography • Documentary Seeing
+            A Visual Archive by Ray Kawshik
         </div>
 
-        <div class="hero-line">
-            “To photograph is to learn how the world refuses abstraction.”
+        <div class="hero-statement">
+            “An earthbound in a closed cosmos.”
         </div>
 
         <p>
-            A visual archive of streets, silences, rituals, labour,
-            shadows, and ordinary cosmologies. These photographs attempt
-            to stay close to the ground—to the earthbound.
-        </p>
-
-        <a href="#gallery" class="btn">
-            Enter the Archive
-        </a>
-
-    </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="section" id="gallery">
-
-    <h2 class="section-title">Street</h2>
-
-    <div class="gallery">
-
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-        <img src="photo3.jpg" alt="">
-        <img src="photo4.jpg" alt="">
-        <img src="photo5.jpg" alt="">
-        <img src="photo6.jpg" alt="">
-        <img src="photo7.jpg" alt="">
-        <img src="photo8.jpg" alt="">
-
-    </div>
-
-</section>
-
-<!-- FEATURED WORK -->
-
-<section class="section" id="featured">
-
-    <h2 class="section-title">Featured Work</h2>
-
-    <div class="featured">
-
-        <h3>Street-Dwellers in Calcutta</h3>
-
-        <p>
-            An ethnographic documentary photography project exploring
-            everyday lives, vulnerability, habitation, and urban intimacy
-            among street-dwelling communities in Kolkata.
-
-            One of the photographs from this project was published by
-            BBC UK (17 April 2013), marking an early public recognition
-            of documentary work rooted in witnessing rather than distance.
+            Earthbound Frames is an ongoing photographic archive of atmospheres,
+            thresholds, ruins, weather, and nonhuman presences. These works are
+            not documentary records alone, but encounters with distributed worlds:
+            cities held together by trees, abandoned walls remembering rain,
+            roads dissolving into landscape, and the fragile negotiations between
+            human life and planetary existence.
         </p>
 
     </div>
 
 </section>
 
-<!-- ABOUT -->
+<!-- CURATORIAL NOTE -->
 
 <section class="section" id="about">
 
-    <h2 class="section-title">About</h2>
+    <h2 class="section-title">Curatorial Note</h2>
 
-    <div class="about-box">
+    <div class="curatorial-note">
+        This exhibition emerges from a practice of attention rather than
+        spectacle. It asks what it means to inhabit the world not as master,
+        but as participant. The photographs in Earthbound Frames explore the
+        poetics of ordinary spaces: railway stations, rain-soaked streets,
+        abandoned architecture, thresholds of transit, and the quiet persistence
+        of nonhuman life.
 
-        <p>
-            I am Ray Kawshik, a researcher, teacher, and visual ethnographer.
-            My work moves between literature and photography, between theory
-            and the street. I am interested in how images think—how they hold
-            labour, ritual, climate, silence, and human vulnerability without
-            reducing them to explanation.
+        These are not images of nature as scenery. They are negotiations,
+        witnesses, and fragments of planetary coexistence. The frame here is
+        not a border, but a temporary settlement between seeing and being seen.
+    </div>
 
-            Photography, for me, is not illustration. It is a way of staying
-            answerable to the world.
-        </p>
+</section>
 
+<!-- EXHIBITION META -->
+
+<section class="section" id="exhibition">
+
+    <h2 class="section-title">Exhibition Details</h2>
+
+    <div class="meta-grid">
+
+        <div class="meta-box">
+            <h3>Artist</h3>
+            <p>Ray Kawshik</p>
+        </div>
+
+        <div class="meta-box">
+            <h3>Medium</h3>
+            <p>Digital Photography / Visual Ethnography</p>
+        </div>
+
+        <div class="meta-box">
+            <h3>Collection</h3>
+            <p>40 Photographic Works</p>
+        </div>
+
+        <div class="meta-box">
+            <h3>Status</h3>
+            <p>Ongoing Archive</p>
+        </div>
+
+        <div class="meta-box">
+            <h3>Location</h3>
+            <p>India / Urban & Ecological Field Sites</p>
+        </div>
+
+        <div class="meta-box">
+            <h3>Theme</h3>
+            <p>Planetary Entanglements</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COLLECTION -->
+
+<section class="section" id="frames">
+
+    <h2 class="section-title">Collection</h2>
+
+    <div class="visual-slider">
+
+        <button class="arrow prev" onclick="prevSlide()">‹</button>
+        <button class="arrow next" onclick="nextSlide()">›</button>
+
+        <div class="visual-track" id="sliderTrack">
+
+            <div class="visual-slide"><img src="photo1.jpg"></div>
+            <div class="visual-slide"><img src="photo2.jpg"></div>
+            <div class="visual-slide"><img src="photo3.jpg"></div>
+            <div class="visual-slide"><img src="photo4.jpg"></div>
+            <div class="visual-slide"><img src="photo5.jpg"></div>
+            <div class="visual-slide"><img src="photo6.jpg"></div>
+            <div class="visual-slide"><img src="photo7.jpg"></div>
+            <div class="visual-slide"><img src="photo8.jpg"></div>
+            <div class="visual-slide"><img src="photo9.jpg"></div>
+            <div class="visual-slide"><img src="photo10.jpg"></div>
+            <div class="visual-slide"><img src="photo11.jpg"></div>
+            <div class="visual-slide"><img src="photo12.jpg"></div>
+            <div class="visual-slide"><img src="photo13.jpg"></div>
+            <div class="visual-slide"><img src="photo14.jpg"></div>
+            <div class="visual-slide"><img src="photo15.jpg"></div>
+            <div class="visual-slide"><img src="photo16.jpg"></div>
+            <div class="visual-slide"><img src="photo17.jpg"></div>
+            <div class="visual-slide"><img src="photo18.jpg"></div>
+            <div class="visual-slide"><img src="photo19.jpg"></div>
+            <div class="visual-slide"><img src="photo20.jpg"></div>
+            <div class="visual-slide"><img src="photo21.jpg"></div>
+            <div class="visual-slide"><img src="photo22.jpg"></div>
+            <div class="visual-slide"><img src="photo23.jpg"></div>
+            <div class="visual-slide"><img src="photo24.jpg"></div>
+            <div class="visual-slide"><img src="photo25.jpg"></div>
+            <div class="visual-slide"><img src="photo26.jpg"></div>
+            <div class="visual-slide"><img src="photo27.jpg"></div>
+            <div class="visual-slide"><img src="photo28.jpg"></div>
+            <div class="visual-slide"><img src="photo29.jpg"></div>
+            <div class="visual-slide"><img src="photo30.jpg"></div>
+            <div class="visual-slide"><img src="photo31.jpg"></div>
+            <div class="visual-slide"><img src="photo32.jpg"></div>
+            <div class="visual-slide"><img src="photo33.jpg"></div>
+            <div class="visual-slide"><img src="photo34.jpg"></div>
+            <div class="visual-slide"><img src="photo35.jpg"></div>
+            <div class="visual-slide"><img src="photo36.jpg"></div>
+            <div class="visual-slide"><img src="photo37.jpg"></div>
+            <div class="visual-slide"><img src="photo38.jpg"></div>
+            <div class="visual-slide"><img src="photo39.jpg"></div>
+            <div class="visual-slide"><img src="photo40.jpg"></div>
+
+        </div>
+    </div>
+
+    <div class="caption">
+        Selected works from the ongoing Earthbound Frames archive.
+        Swipe or use arrows to move through the collection.
     </div>
 
 </section>
@@ -346,19 +454,62 @@ footer a{
     <h3>Contact</h3>
 
     <p>Email: gogolray@gmail.com</p>
-    <p>Instagram:
+
+    <p>
         <a href="https://www.instagram.com/raykawshik/" target="_blank">
-            @raykawshik
+            Instagram
         </a>
     </p>
 
-    <p>
-        ORCID |
-        Google Scholar |
-        ResearchGate
-    </p>
+    <div class="copyright">
+        © 2026 Ray Kawshik. All photographs, texts, and visual materials on this
+        website are protected by copyright and may not be reproduced, distributed,
+        published, or used in any form without prior written permission from the artist.
+        All rights reserved.
+    </div>
 
 </footer>
+
+<script>
+let currentSlide = 0;
+const track = document.getElementById("sliderTrack");
+const totalSlides = 40;
+
+function updateSlide(){
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide(){
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlide();
+}
+
+function prevSlide(){
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlide();
+}
+
+setInterval(nextSlide, 30000);
+
+let startX = 0;
+let endX = 0;
+
+track.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", e => {
+    endX = e.changedTouches[0].clientX;
+
+    if(startX - endX > 50){
+        nextSlide();
+    }
+
+    if(endX - startX > 50){
+        prevSlide();
+    }
+});
+</script>
 
 </body>
 </html>
