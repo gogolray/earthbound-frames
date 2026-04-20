@@ -51,6 +51,7 @@ nav{
 .nav-links{
     display:flex;
     gap:32px;
+    flex-wrap:wrap;
 }
 
 .nav-links a{
@@ -126,7 +127,7 @@ nav{
     color:#333;
 }
 
-/* EXHIBITION META */
+/* META */
 
 .meta-grid{
     display:grid;
@@ -147,10 +148,6 @@ nav{
     letter-spacing:1px;
     margin-bottom:10px;
     color:#555;
-}
-
-.meta-box p{
-    font-size:.95rem;
 }
 
 /* GALLERY */
@@ -188,12 +185,14 @@ nav{
     padding:30px;
 }
 
+/* ARROWS */
+
 .arrow{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
     border:none;
-    background:rgba(255,255,255,.9);
+    background:rgba(255,255,255,.92);
     font-size:2rem;
     cursor:pointer;
     padding:12px 20px;
@@ -233,10 +232,6 @@ footer h3{
     margin-bottom:18px;
 }
 
-footer p{
-    margin-bottom:10px;
-}
-
 footer a{
     color:white;
     text-decoration:none;
@@ -269,7 +264,6 @@ footer a{
 
     .nav-links{
         gap:18px;
-        flex-wrap:wrap;
         justify-content:center;
     }
 }
@@ -277,8 +271,6 @@ footer a{
 </head>
 
 <body>
-
-<!-- NAV -->
 
 <nav>
     <div class="logo">Earthbound Frames</div>
@@ -290,8 +282,6 @@ footer a{
         <a href="#contact">Contact</a>
     </div>
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -308,40 +298,31 @@ footer a{
         </div>
 
         <p>
-            Earthbound Frames is an ongoing photographic archive of atmospheres,
-            thresholds, ruins, weather, and nonhuman presences. These works are
-            not documentary records alone, but encounters with distributed worlds:
-            cities held together by trees, abandoned walls remembering rain,
-            roads dissolving into landscape, and the fragile negotiations between
-            human life and planetary existence.
+            A photographic archive of atmospheres, ruins, thresholds,
+            weather, cities, and nonhuman presences. These are not simply
+            images of places, but encounters with distributed worlds and
+            fragile planetary coexistence.
         </p>
 
     </div>
 
 </section>
 
-<!-- CURATORIAL NOTE -->
-
 <section class="section" id="about">
 
     <h2 class="section-title">Curatorial Note</h2>
 
     <div class="curatorial-note">
-        This exhibition emerges from a practice of attention rather than
-        spectacle. It asks what it means to inhabit the world not as master,
-        but as participant. The photographs in Earthbound Frames explore the
-        poetics of ordinary spaces: railway stations, rain-soaked streets,
-        abandoned architecture, thresholds of transit, and the quiet persistence
-        of nonhuman life.
+        Earthbound Frames emerges from a practice of attention rather than spectacle.
+        It explores ordinary spaces where the world quietly exceeds the human:
+        rain-soaked stations, abandoned walls, railway thresholds, roadside trees,
+        and cities held together by weather.
 
-        These are not images of nature as scenery. They are negotiations,
-        witnesses, and fragments of planetary coexistence. The frame here is
-        not a border, but a temporary settlement between seeing and being seen.
+        These are not landscapes as scenery. They are negotiations.
+        The frame is not a border, but a temporary settlement between seeing and being seen.
     </div>
 
 </section>
-
-<!-- EXHIBITION META -->
 
 <section class="section" id="exhibition">
 
@@ -361,7 +342,7 @@ footer a{
 
         <div class="meta-box">
             <h3>Collection</h3>
-            <p>40 Photographic Works</p>
+            <p>28 Photographic Works</p>
         </div>
 
         <div class="meta-box">
@@ -382,8 +363,6 @@ footer a{
     </div>
 
 </section>
-
-<!-- COLLECTION -->
 
 <section class="section" id="frames">
 
@@ -424,20 +403,9 @@ footer a{
             <div class="visual-slide"><img src="photo26.jpg"></div>
             <div class="visual-slide"><img src="photo27.jpg"></div>
             <div class="visual-slide"><img src="photo28.jpg"></div>
-            <div class="visual-slide"><img src="photo29.jpg"></div>
-            <div class="visual-slide"><img src="photo30.jpg"></div>
-            <div class="visual-slide"><img src="photo31.jpg"></div>
-            <div class="visual-slide"><img src="photo32.jpg"></div>
-            <div class="visual-slide"><img src="photo33.jpg"></div>
-            <div class="visual-slide"><img src="photo34.jpg"></div>
-            <div class="visual-slide"><img src="photo35.jpg"></div>
-            <div class="visual-slide"><img src="photo36.jpg"></div>
-            <div class="visual-slide"><img src="photo37.jpg"></div>
-            <div class="visual-slide"><img src="photo38.jpg"></div>
-            <div class="visual-slide"><img src="photo39.jpg"></div>
-            <div class="visual-slide"><img src="photo40.jpg"></div>
 
         </div>
+
     </div>
 
     <div class="caption">
@@ -446,8 +414,6 @@ footer a{
     </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer id="contact">
 
@@ -473,7 +439,7 @@ footer a{
 <script>
 let currentSlide = 0;
 const track = document.getElementById("sliderTrack");
-const totalSlides = 40;
+const totalSlides = 28;
 
 function updateSlide(){
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
